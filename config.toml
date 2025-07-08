@@ -1,7 +1,7 @@
-base_url = "https://YOUR_URL.TLD"
-title = "site title"
-description = "YOUR_SITE_DESCRIPTION"
-author = "YOUR_NAME"
+base_url = "https://khalid-salad.github.io"
+title = "Khalid's Website"
+description = "Welcome to my website."
+author = "Khalid Hourani"
 theme = "tabi"
 generate_feeds = true
 compile_sass = true
@@ -9,7 +9,7 @@ minify_html = true
 build_search_index = true
 default_language = "en"
 taxonomies = [{name = "tags", feed = true}]
-
+hard_link_static = true
 
 [search]
 # Whether to include the title of the page/section in the index.
@@ -34,7 +34,7 @@ bottom_footnotes = true
 # To use a Zola built-in theme, CSP needs to allow unsafe-inline for style-src.
 highlight_theme = "css"
 smart_punctuation = true
-
+external_links_class = "external"
 
 [extra]
 # Check out the documentation (or the comments below) to learn how to customise tabi:
@@ -66,7 +66,7 @@ default_theme = ""
 # contrast (in light theme) for readability and might not be suitable for all users.
 # Furthermore, low contrasting elements will affect your Google Lighthouse rating.
 # All other skins have optimal contrast.
-skin = ""
+skin = "sakura"
 
 # Set browser theme colour. Can be a single colour or [light, dark].
 # Note: Bright colors may be ignored in dark mode.
@@ -107,7 +107,7 @@ copy_button = true
 
 # Make code block names clickable if they are URLs (loads ~400 bytes of JavaScript).
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
-code_block_name_links = false
+code_block_name_links = true
 
 # Force left-to-right (LTR) direction for code blocks.
 # Set to false to allow code to follow the document's natural direction.
@@ -130,7 +130,7 @@ show_date = true
 # "date" - Show only the original date of the post (default if unset).
 # "updated" - Show only the last updated date of the post. If there is no last updated date, it shows the original date.
 # "both" - Show both the original date and the last updated date.
-post_listing_date = "date"
+post_listing_date = "both"
 
 # Show "Jump to posts" link next to series' title.
 # By default, the link appears automatically when a series description exceeds 2000 characters.
@@ -234,6 +234,8 @@ menu = [
     { name = "archive", url = "archive", trailing_slash = true },
     { name = "tags", url = "tags", trailing_slash = true },
     { name = "projects", url = "projects", trailing_slash = true },
+    { name = "research", url = "research", trailing_slash = true },
+    { name = "books", url = "books", trailing_slash = true },
 ]
 
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
@@ -269,12 +271,12 @@ encode_plaintext_email = true  # Setting is ignored if email is already encoded.
 # fediverse_creator = { handle = "username", domain = "example.com" }
 
 # Extra menu to show on the footer, below socials section.
-# footer_menu = [
-#     {url = "about", name = "about", trailing_slash = true},
-#     {url = "privacy", name = "privacy", trailing_slash = true},
-#     {url = "sitemap.xml", name = "sitemap", trailing_slash = false},
+footer_menu = [
+    {url = "about", name = "about", trailing_slash = true},
+    {url = "privacy", name = "privacy", trailing_slash = true},
+    {url = "sitemap.xml", name = "sitemap", trailing_slash = false},
 #     {url = "https://example.com", name = "external link", trailing_slash = true},
-# ]
+]
 
 # Enable a copyright notice for the footer, shown between socials and the "Powered by" text.
 # $TITLE will be replaced by the website's title.
@@ -282,7 +284,7 @@ encode_plaintext_email = true  # Setting is ignored if email is already encoded.
 # $AUTHOR will be replaced by the `author` variable.
 # $SEPARATOR will be replaced by the `separator` variable.
 # Markdown is supported (links, emphasis, etc).
-# copyright = "$TITLE © $CURRENT_YEAR $AUTHOR $SEPARATOR Unless otherwise noted, the content in this website is available under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license."
+copyright = "$TITLE © $CURRENT_YEAR $AUTHOR $SEPARATOR Unless otherwise noted, the content in this website is available under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) license."
 
 # For multi-language sites, you can set a different copyright for each language.
 # The old way of setting `translated_copyright = true` and using i18n files is deprecated.
